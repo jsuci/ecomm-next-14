@@ -1,3 +1,7 @@
+import { Spinner } from "@/components/bootstrap";
+
 export default function Loading() {
-  return <p>Loading...</p>;
+  return (
+    <Spinner animation="border" className="d-block m-auto"/>
+  )
 }
