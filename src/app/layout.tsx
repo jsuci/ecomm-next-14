@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Container, SSRProvider } from "@/components/bootstrap";
+import NavBar from "./NavBar";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["100", "400", "700"] });
 
@@ -20,7 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <SSRProvider>
-          <main><Container>{children}</Container></main>
+          <NavBar />
+          <main>
+            <Container>{children}</Container>
+          </main>
         </SSRProvider>
       </body>
     </html>
